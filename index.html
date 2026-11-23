@@ -1,22 +1,63 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>La abeja y la mosca · ANGARA CAMOS</title>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f3e9"><title>La abeja y la mosca · ANGARA CAMOS</title>
 <style>
-:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#f7f2e9;color:#292c26;font-family:Georgia,serif;text-align:center}
-main{max-width:680px;margin:auto;padding:38px 22px 55px}h1{font-weight:normal;font-size:clamp(30px,7vw,48px);margin:10px 0} .sub{letter-spacing:.22em;font:12px Arial,sans-serif;color:#8a7046} .scene{position:relative;overflow:hidden;height:270px;border-radius:120px 120px 16px 16px;background:linear-gradient(#e8e6d8,#faf7ef);margin:30px auto;border:1px solid #d8c8a7}
-.flower{position:absolute;bottom:25px;font-size:46px;filter:saturate(.55)}.f1{left:12%}.f2{left:39%;bottom:48px}.f3{left:67%}
-.bee,.fly{position:absolute;font-size:34px;animation:bee 8s ease-in-out infinite}.bee{top:72px;left:4%}.fly{top:130px;left:75%;animation-name:fly;animation-delay:1s}.waste{position:absolute;bottom:23px;right:9%;font-size:30px;filter:grayscale(.8)}
-@keyframes bee{0%{transform:translate(0,0)}25%{transform:translate(90px,-35px)}55%{transform:translate(170px,12px)}80%{transform:translate(250px,-25px)}100%{transform:translate(0,0)}}@keyframes fly{0%,100%{transform:translate(0,0)}40%{transform:translate(-28px,-42px)}70%{transform:translate(10px,30px)}}
-blockquote{font-size:clamp(21px,5vw,29px);line-height:1.4;color:#876c40;margin:28px 0}article{text-align:left;font-size:18px;line-height:1.8}article p{margin:0 0 18px}.signature{margin-top:45px;border-top:1px solid #d6c9ad;padding-top:25px;letter-spacing:.2em;font:14px Arial,sans-serif}
-@media(prefers-reduced-motion:reduce){.bee,.fly{animation:none}}
-</style></head><body><main><div class="sub">UNA PEQUEÑA REFLEXIÓN</div><h1>La abeja y la mosca</h1>
-<div class="scene" role="img" aria-label="Una abeja recorre las flores mientras una mosca se acerca a la basura"><span class="flower f1">✿</span><span class="flower f2">✾</span><span class="flower f3">✿</span><span class="bee">🐝</span><span class="fly">🪰</span><span class="waste">▤</span></div>
-<blockquote>«Todos vivimos en el mismo mundo, pero cada uno encuentra aquello que decide buscar».</blockquote>
-<article><p>Una abeja y una mosca volaban por el mismo jardín.</p>
-<p>La abeja buscaba flores, colores y dulzura. Aunque encontrara suciedad por el camino, seguía volando hasta descubrir algo hermoso.</p>
+:root{--ink:#34372d;--olive:#6c7652;--gold:#ae8c4e;--paper:#f8f5ed}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman',serif}
+main{max-width:900px;margin:auto;padding:32px 20px 55px;text-align:center}
+.brand{font:600 12px Arial,sans-serif;letter-spacing:.33em;color:var(--gold);margin:4px 0 26px}
+h1{font-size:clamp(35px,6vw,60px);font-weight:400;margin:0 0 9px}
+.subtitle{font-style:italic;color:#797b6e;margin:0 0 22px}
+.scene{position:relative;border:1px solid #ded7c5;border-radius:22px;overflow:hidden;background:linear-gradient(#eaf1e8,#f8f2e3 83%);box-shadow:0 14px 45px #5c583214}
+svg{width:100%;height:auto;display:block}
+#bee{animation:beeRoute 13s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+#fly{animation:flyRoute 13s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+.beeW{animation:wings .13s ease-in-out infinite alternate;transform-origin:50% 85%;transform-box:fill-box}
+.flyW{animation:wings .09s ease-in-out infinite alternate;transform-origin:50% 85%;transform-box:fill-box}
+.flower{animation:sway 3s ease-in-out infinite alternate;transform-origin:bottom;transform-box:fill-box}
+.spark{animation:glow 2s ease-in-out infinite alternate}
+@keyframes beeRoute{0%,100%{transform:translate(-75px,-48px) rotate(-5deg)}18%{transform:translate(45px,-90px) rotate(7deg)}38%{transform:translate(150px,-40px) rotate(-4deg)}55%{transform:translate(20px,-100px) rotate(4deg)}76%{transform:translate(-120px,-55px) rotate(-7deg)}}
+@keyframes flyRoute{0%,100%{transform:translate(80px,-105px) rotate(8deg)}23%{transform:translate(-35px,-25px) rotate(-6deg)}47%{transform:translate(-115px,-65px) rotate(5deg)}68%{transform:translate(25px,-5px) rotate(-5deg)}}
+@keyframes wings{to{transform:scaleY(.5) rotate(12deg)}}@keyframes sway{to{transform:rotate(4deg)}}@keyframes glow{to{opacity:.25}}
+.narration{min-height:75px;padding:17px 12px 8px;color:#4c5541;font-size:clamp(17px,3vw,22px);line-height:1.4}
+.controls{display:flex;justify-content:center;gap:12px;align-items:center;margin:8px 0 25px}
+button{border:1px solid #aa956a;background:transparent;color:#65542f;border-radius:30px;padding:10px 22px;cursor:pointer;font:13px Arial,sans-serif}
+button:hover{background:#eee5d2}
+.story{max-width:620px;margin:35px auto 0;text-align:left;font-size:18px;line-height:1.8}
+.story p{margin:0 0 18px}.takeaway{text-align:center;font-size:24px;color:#69744e;margin:30px 0}
+footer{border-top:1px solid #ded7c5;margin-top:35px;padding-top:25px;color:#9c7e47;letter-spacing:.13em;font:12px Arial,sans-serif}
+@media(prefers-reduced-motion:reduce){#bee,#fly,.beeW,.flyW,.flower,.spark{animation:none!important}}
+</style></head><body><main><div class="brand">ANGARA CAMOS</div>
+<h1>La abeja y la mosca</h1><p class="subtitle">Una pequeña fábula sobre la forma de mirar la vida</p>
+<div class="scene"><svg viewBox="0 0 800 440" role="img" aria-label="Un jardín ilustrado con flores, una abeja que visita flores y una mosca que vuela hacia unos desperdicios">
+<defs><linearGradient id="ground" x2="0" y2="1"><stop stop-color="#a7bb8c"/><stop offset="1" stop-color="#849a6e"/></linearGradient>
+<g id="bloom"><path d="M0 0 Q-8 -35 0 -75" fill="none" stroke="#67835c" stroke-width="5"/><path d="M-2 -35q-25 -18 -31 -5q14 16 31 13M-1 -53q20 -22 28 -13q-8 16 -28 17" fill="#819e6b"/><g transform="translate(0,-78)"><ellipse rx="17" ry="29" cy="-19" fill="#fff5d9"/><ellipse rx="17" ry="29" cy="19" fill="#fff5d9"/><ellipse rx="29" ry="17" cx="-19" fill="#fff5d9"/><ellipse rx="29" ry="17" cx="19" fill="#fff5d9"/><circle r="16" fill="#d6aa54"/><circle r="6" fill="#f5d88e"/></g></g></defs>
+<circle cx="672" cy="70" r="32" fill="#f5dfaa" opacity=".65"/><path d="M0 323Q150 282 290 315T560 302T800 315V440H0Z" fill="#c9d3ac"/><path d="M0 355Q170 330 345 356T800 338V440H0Z" fill="url(#ground)"/>
+<g opacity=".3" fill="#68875d"><ellipse cx="100" cy="367" rx="80" ry="15"/><ellipse cx="465" cy="386" rx="110" ry="15"/></g>
+<g class="flower" transform="translate(115 346) scale(.95)"><use href="#bloom"/></g>
+<g class="flower" transform="translate(225 345) scale(.72)"><use href="#bloom"/><circle cx="0" cy="-56" r="1" fill="#fff"/></g>
+<g class="flower" transform="translate(333 355) scale(1.05)"><use href="#bloom"/></g>
+<g class="flower" transform="translate(410 350) scale(.6)"><use href="#bloom"/></g>
+<g transform="translate(614 333)"><path d="M-58 -10L-47 -76L45 -76L57 -10Z" fill="#8b8c7b"/><path d="M-61 -79h111v12H-61z" fill="#6d7164"/><path d="M-34 -91l-15 -24l35 -6l22 30" fill="#b4a98e"/><path d="M12 -84l18 -29l25 14l-7 17" fill="#c2b4a0"/><path d="M-17 -70l21 13l-15 25l-21 -15Z" fill="#d2c7aa" opacity=".6"/></g>
+<g id="bee" transform="translate(155 215)"><g class="beeW"><ellipse cx="-7" cy="-18" rx="21" ry="27" fill="#fff" opacity=".77" stroke="#bdc6b9" stroke-width="2"/><ellipse cx="16" cy="-18" rx="21" ry="27" fill="#fff" opacity=".7" stroke="#bdc6b9" stroke-width="2"/></g><ellipse cx="0" cy="10" rx="34" ry="24" fill="#e7b94f" stroke="#7e6b40" stroke-width="2"/><path d="M-14 -10v40M6 -12v44" stroke="#564b38" stroke-width="8"/><ellipse cx="0" cy="10" rx="34" ry="24" fill="none" stroke="#6e603f" stroke-width="2"/><circle cx="29" cy="5" r="17" fill="#e7b94f"/><circle cx="35" cy="2" r="2.8" fill="#403b30"/><path d="M34 -8q3 -13 9 -14" stroke="#64543b" fill="none" stroke-width="2"/><path d="M-34 9l-12 5l12 5" fill="#8c7552"/></g>
+<g id="fly" transform="translate(635 205)"><g class="flyW"><ellipse cx="-9" cy="-18" rx="20" ry="28" fill="#e9f0ee" opacity=".75" stroke="#9baaa8"/><ellipse cx="13" cy="-18" rx="20" ry="28" fill="#e9f0ee" opacity=".75" stroke="#9baaa8"/></g><ellipse cx="0" cy="12" rx="27" ry="22" fill="#777c72"/><circle cx="23" cy="5" r="15" fill="#646d66"/><circle cx="30" cy="2" r="6" fill="#ad7d69"/><circle cx="32" cy="0" r="2" fill="#322f2d"/><path d="M-10 31l-9 13m23 -12l0 13m14 -15l10 12" stroke="#62675d" stroke-width="2"/></g>
+<g class="spark" fill="#d7ae62"><circle cx="78" cy="175" r="3"/><circle cx="365" cy="143" r="4"/><circle cx="280" cy="203" r="2.5"/></g>
+</svg></div>
+<div class="narration" id="narration" aria-live="polite">Dos criaturas vuelan por el mismo jardín…</div>
+<div class="controls"><button id="replay" type="button">↻ Volver a empezar</button><button id="pause" type="button">Pausar animación</button></div>
+<div class="story"><p>Una abeja y una mosca volaban por el mismo jardín. La abeja buscaba flores, colores y dulzura. Aunque encontrara suciedad por el camino, seguía volando hasta descubrir algo hermoso.</p>
 <p>La mosca, en cambio, podía estar rodeada de las flores más bonitas del mundo, pero siempre terminaba buscando la basura.</p>
 <p>Las dos vivían en el mismo mundo, pero cada una veía uno diferente.</p>
 <p>Y con las personas ocurre algo parecido. Hay quienes encuentran motivos para sonreír incluso en los días difíciles. Y hay quienes, aun rodeados de cosas buenas, solo encuentran defectos.</p>
-<p><strong>No siempre podemos elegir lo que nos rodea, pero sí dónde ponemos nuestra atención.</strong></p>
-<p>Sé como la abeja. Busca lo bonito, quédate con lo bueno y comparte tu dulzura con los demás.</p></article>
-<div class="signature">ANGARA CAMOS</div><p><em>Los pequeños detalles hacen la vida más bonita.</em></p></main></body></html>
+<p>No siempre podemos elegir lo que nos rodea, pero sí dónde ponemos nuestra atención.</p></div>
+<div class="takeaway">Sé como la abeja.<br>Busca lo bonito, quédate con lo bueno<br>y comparte tu dulzura con los demás.</div>
+<footer>ANGARA CAMOS · Los pequeños detalles hacen la vida más bonita</footer>
+</main><script>
+const captions=['Dos criaturas vuelan por el mismo jardín…','La abeja busca flores, colores y dulzura.','La mosca, incluso entre flores, busca la basura.','El mundo es el mismo. La mirada es diferente.','No siempre elegimos lo que nos rodea, pero sí dónde ponemos nuestra atención.'];
+let start=Date.now(),paused=false,elapsed=0;
+const anims=[...document.querySelectorAll('#bee,#fly,.beeW,.flyW,.flower,.spark')];
+function tick(){if(paused)return;elapsed=Date.now()-start;document.getElementById('narration').textContent=captions[Math.floor(elapsed/4500)%captions.length]}
+setInterval(tick,200);tick();
+document.getElementById('pause').onclick=()=>{paused=!paused;anims.forEach(e=>e.style.animationPlayState=paused?'paused':'running');document.getElementById('pause').textContent=paused?'Reanudar animación':'Pausar animación';if(!paused)start=Date.now()-elapsed};
+document.getElementById('replay').onclick=()=>{start=Date.now();elapsed=0;anims.forEach(e=>{e.style.animation='none';e.getBoundingClientRect();e.style.animation=''});paused=false;document.getElementById('pause').textContent='Pausar animación';tick()};
+</script></body></html>
